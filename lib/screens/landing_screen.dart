@@ -15,27 +15,39 @@ class LandingScreen extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(30, 50, 30, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const [
-              Text(
+            children: [
+              const Text(
                 'Look Here You Slow Learner',
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Times New Roman'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'Enter your name',
                   hintText: 'Full Name',
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Image.asset(
+                'assets/icons/2.jpg',
+                height: 200,
+                width: 800,
+              ),
             ],
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.skip_next),
         ));
   }
 }
