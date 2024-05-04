@@ -20,7 +20,7 @@ class LandingScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const Text(
-              'Look Here You Slow Learner',
+              'Images',
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -47,22 +47,30 @@ class LandingScreen extends StatelessWidget {
                 width: 800,
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            IconButton(
-                onPressed: () {
-                  controller.previousImage();
-                },
-                icon: const Icon(Icons.skip_previous))
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          controller.nextImage();
-        },
-        child: const Icon(Icons.skip_next),
+      floatingActionButton: Stack(
+        children: [
+          Positioned(
+              bottom: 60,
+              right: 16,
+              child: FloatingActionButton(
+                onPressed: () {
+                  controller.nextImage();
+                },
+                child: const Icon(Icons.skip_next),
+              )),
+          Positioned(
+              bottom: 150,
+              right: 16,
+              child: FloatingActionButton(
+                onPressed: () {
+                  controller.previousImage();
+                },
+                child: const Icon(Icons.skip_previous),
+              ))
+        ],
       ),
     );
   }
