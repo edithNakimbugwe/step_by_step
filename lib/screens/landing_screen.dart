@@ -47,6 +47,10 @@ class LandingScreen extends StatelessWidget {
                 width: 800,
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text('This part will show the image details')
           ],
         ),
       ),
