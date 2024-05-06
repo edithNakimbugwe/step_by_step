@@ -50,7 +50,7 @@ class LandingScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Text('This part will show the image details')
+            Obx(() => Text(controller.identifyImage()))
           ],
         ),
       ),
