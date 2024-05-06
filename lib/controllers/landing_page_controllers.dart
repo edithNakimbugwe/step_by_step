@@ -20,4 +20,21 @@ class LandingPageController extends GetxController {
     currentImageIndex.value =
         (currentImageIndex.value - 1 + imageUrls.length) % imageUrls.length;
   }
+
+  String identifyImage() {
+    String imageName;
+    if (currentImageUrl == 'assets/icons/1.jpg') {
+      imageName = 'image 1';
+    } else if (currentImageUrl == 'assets/icons/2.jpg') {
+      imageName = 'image 2';
+    } else if (currentImageUrl == 'assets/icons/3.jpg') {
+      imageName = 'image 3';
+    } else if (currentImageUrl == 'assets/icons/4.jpg') {
+      imageName = 'image 4';
+    } else {
+      imageName = 'No image';
+    }
+
+    return imageName;
+  }
 }
