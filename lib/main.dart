@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:step_by_step/screens/landing_screen.dart';
 
-void main() {
+import 'controllers/network_controllers.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final NetworkController networkController = NetworkController();
+  Get.put(networkController);
   runApp(const MyApp());
 }
 
