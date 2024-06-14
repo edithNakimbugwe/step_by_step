@@ -4,7 +4,7 @@ import 'package:step_by_step/screens/landing_screen.dart';
 
 import 'controllers/network_controllers.dart';
 
-Future<void> main() async {
+ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   final NetworkController networkController = NetworkController();
