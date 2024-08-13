@@ -10,7 +10,7 @@ class NetworkController extends GetxController {
     super.onInit();
     _connectivity.onConnectivityChanged.listen((ConnectivityResult result) {
       updateConnectionStatus(result);
-    });
+    } as void Function(List<ConnectivityResult> event)?);
   }
 
   void updateConnectionStatus(ConnectivityResult connectivityResult) {
